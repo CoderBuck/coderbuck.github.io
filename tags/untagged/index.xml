@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>untagged on Coder Buck</title>
+    <link>https://coderbuck.github.io/tags/untagged/</link>
+    <description>Recent content in untagged on Coder Buck</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Sat, 11 Jul 2020 22:17:12 +0800</lastBuildDate>
+    
+	<atom:link href="https://coderbuck.github.io/tags/untagged/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hello Hugo</title>
+      <link>https://coderbuck.github.io/posts/hello-hugo/</link>
+      <pubDate>Sat, 11 Jul 2020 22:17:12 +0800</pubDate>
+      
+      <guid>https://coderbuck.github.io/posts/hello-hugo/</guid>
+      <description>新建文章 hugo new posts/my-first-post.md 或者直接在 content/posts目录手动创建my-first-post.md
+Start the Hugo server hugo server -D 启动后可以本地预览
+Build static pages hugo -D 123</description>
+    </item>
+    
+  </channel>
+</rss>
