@@ -6,19 +6,10 @@
     <description>Recent content on Buck&#39;s Bolg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 12 Jul 2020 18:46:44 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jul 2020 22:33:05 +0800</lastBuildDate>
     
 	<atom:link href="https://coderbuck.github.io/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>About</title>
-      <link>https://coderbuck.github.io/posts/about/</link>
-      <pubDate>Sun, 12 Jul 2020 18:46:44 +0800</pubDate>
-      
-      <guid>https://coderbuck.github.io/posts/about/</guid>
-      <description>Hello</description>
-    </item>
     
     <item>
       <title>Publish Library to Jitpack</title>
