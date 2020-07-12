@@ -1,115 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Posts on Coder Buck</title>
-		<link>https://coderbuck.github.io/posts/</link>
-		<description>Recent content in Posts on Coder Buck</description>
-		<generator>Hugo -- gohugo.io</generator>
-		<language>en-us</language>
-		<copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-		<lastBuildDate>Sat, 11 Jul 2020 22:33:05 +0800</lastBuildDate>
-		<atom:link href="https://coderbuck.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-		
-		<item>
-			<title>Publish Library to Jitpack</title>
-			<link>https://coderbuck.github.io/posts/publish-library-to-jitpack/</link>
-			<pubDate>Sat, 11 Jul 2020 22:33:05 +0800</pubDate>
-			
-			<guid>https://coderbuck.github.io/posts/publish-library-to-jitpack/</guid>
-			<description>jitpack 早有耳闻，但是因为之前都是把库发布到 jcenter，所以一直没有碰过 jitpack。最近也是因为发布到 jcenter 遇到了问题，然后才转了 jitpack。用了后就感觉很爽。
+  <channel>
+    <title>Posts on Buck&#39;s Bolg</title>
+    <link>https://coderbuck.github.io/posts/</link>
+    <description>Recent content in Posts on Buck&#39;s Bolg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 11 Jul 2020 22:33:05 +0800</lastBuildDate>
+    
+	<atom:link href="https://coderbuck.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Publish Library to Jitpack</title>
+      <link>https://coderbuck.github.io/posts/publish-library-to-jitpack/</link>
+      <pubDate>Sat, 11 Jul 2020 22:33:05 +0800</pubDate>
+      
+      <guid>https://coderbuck.github.io/posts/publish-library-to-jitpack/</guid>
+      <description>jitpack 早有耳闻，但是因为之前都是把库发布到 jcenter，所以一直没有碰过 jitpack。最近也是因为发布到 jcenter 遇到了问题，然后才转了 jitpack。用了后就感觉很爽。
 jcenter 遇到了啥问题 一般来说发布的jcenter都会用这个插件 com.novoda.bintray-release 。自己新建项目(viewbinding-ktx)gradle版本默认是6.0以上了，然后这个插件就 bug 了，不支持gradle 6.0+ ，导致我发布不了。然后我又不想回退到5.0 ，就去试 jitpack 了。
 jitpack ！！！ 我对 jitpack 最初的坏印象很简单，就是使用发布到 jitpack 的库，你必须在项目里手动把 jitpack 的仓库加进去:maven { url &#39;https://jitpack.io&#39; } ,而jcenter 创建项目的时候自动就配置了，而且还是带别名的jcenter()。但是这不怪 jitpack &amp;hellip;
 发布到 jitpack 的过程真的是超级简单
 添加插件 android library 添加 android-maven 插件
 // root classpath &#39;com.github.dcendents:android-maven-gradle-plugin:2.1&#39; // module apply plugin: &#39;com.github.dcendents.android-maven&#39;  注意：android-maven 现在维护者不推荐使用了，因为现在 android 插件已经默认提供了 aar 工件的支持。 但是现在还是用 android-maven 更方便，但是 android-maven 相对来说要过时了&amp;hellip;
  java library 添加 maven 插件</description>
-			<content type="html"><![CDATA[<p>jitpack 早有耳闻，但是因为之前都是把库发布到 jcenter，所以一直没有碰过 jitpack。最近也是因为发布到 jcenter 遇到了问题，然后才转了 jitpack。用了后就感觉很爽。</p>
-<h2 id="jcenter-遇到了啥问题">jcenter 遇到了啥问题</h2>
-<p>一般来说发布的jcenter都会用这个插件 <code>com.novoda.bintray-release</code> 。自己新建项目(<a href="https://github.com/CoderBuck/viewbinding-ktx">viewbinding-ktx</a>)gradle版本默认是6.0以上了，然后这个插件就 <a href="https://github.com/novoda/bintray-release/issues/298">bug</a> 了，不支持gradle 6.0+ ，导致我发布不了。然后我又不想回退到5.0 ，就去试 jitpack 了。</p>
-<h2 id="jitpack-">jitpack ！！！</h2>
-<p>我对 jitpack 最初的坏印象很简单，就是使用发布到 jitpack 的库，你必须在项目里手动把 jitpack 的仓库加进去:<code>maven { url 'https://jitpack.io' }</code> ,而jcenter 创建项目的时候自动就配置了，而且还是带别名的<code>jcenter()</code>。但是这不怪 jitpack &hellip;</p>
-<p>发布到 jitpack 的过程真的是超级简单</p>
-<h3 id="添加插件">添加插件</h3>
-<h4 id="android-library">android library</h4>
-<p>添加 android-maven 插件</p>
-<pre><code>// root
-classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
-
-// module
-apply plugin: 'com.github.dcendents.android-maven'
-
-</code></pre><blockquote>
-<p>注意：android-maven 现在维护者不推荐使用了，因为现在 android 插件已经默认提供了 aar 工件的支持。 但是现在还是用 android-maven 更方便，但是 android-maven 相对来说要过时了&hellip;</p>
-</blockquote>
-<h4 id="java-library">java library</h4>
-<p>添加 maven 插件</p>
-<pre><code>apply plugin: 'maven'
-</code></pre><blockquote>
-<p>注意：官方文档里显示，使用 <code>maven-publish</code>插件也是可以的，但是我自己测试至少 gradle 6.0 的项目不行，这个问题也有人提了 <a href="https://github.com/jitpack/jitpack.io/issues/3814">issue</a>，是默认的 gradlew 脚本出了问题。jitpack官方还是建议使用 <code>maven</code> 插件。但是 gradle 官方是不推荐使用 maven插件了，而是推荐使用 maven-publish 插件&hellip; 所以说，不要管他们推荐啥，先保证能用再说</p>
-</blockquote>
-<p>最基本的添加了上面的插件就ok，就能顺利发布了。而且发布的时候会默认也把 source.jar 一起发布，所以不需要单独指定 source.jar 工件。</p>
-<h3 id="发布">发布</h3>
-<p>代码上传到github（gitlab、gitee也支持），然后在github release，比如release 一个 1.0.0 的版本，然后去 jitpack.io 发布就行了</p>
-<h2 id="一些坑">一些&quot;坑&rdquo;</h2>
-<ol>
-<li>项目名</li>
-</ol>
-<p>比如：<code>implementation 'com.github.coderbuck:viewbinding-ktx:1.0.0</code> , viewbinding-ktx 是项目名，所以这种项目名最好是小写的形式</p>
-<ol start="2">
-<li>单个项目多个module library</li>
-</ol>
-<p>比如：https://github.com/CoderBuck/jitpack  这个项目里有两个 library，lib-aar 和 lib-jar。因为他们在同一个项目里，github release 的时候发布的是整体的版本。所以每次发布到 jitpack 的时候，他们两个都是同时发布的，版本号都是相同的，不能单独发布。而且依赖的名字也会有区别，</p>
-<pre><code>implementation 'com.github.coderbuck:jitpack:1.0.0  		// lib-aar + lib-jar
-implementation 'com.github.coderbuckjitpack:lib-aar:1.0.0	// lib-aar
-implementation 'com.github.coderbuckjitpack:lib-jar:1.0.0	// lib-jar
-</code></pre><p>这就可能会导致一些问题，
-1.想要不同版本怎么办？&ndash;再新建一个仓库吧
-2.之前项目是一个 library，后面又新增了一个 library，这会导致依赖的名字变化，跟之前版本不符。&ndash;尽量不要这么做</p>
-<ol start="3">
-<li>发布的东西不方便查看
-你需要到 <a href="https://jitpack.io/com/github/CoderBuck/viewbinding-ktx/1.0.0/build.log">build.log</a> 去查看都发布了什么，没有一个统一管理的地方。
-比如：</li>
-</ol>
-<pre><code>Build artifacts:
-com.github.CoderBuck:viewbinding-ktx:1.0.0
-
-Files: 
-com/github/CoderBuck/viewbinding-ktx/1.0.0
-com/github/CoderBuck/viewbinding-ktx/1.0.0/build.log
-com/github/CoderBuck/viewbinding-ktx/1.0.0/viewbinding-ktx-1.0.0-sources.jar
-com/github/CoderBuck/viewbinding-ktx/1.0.0/viewbinding-ktx-1.0.0.aar
-com/github/CoderBuck/viewbinding-ktx/1.0.0/viewbinding-ktx-1.0.0.pom
-com/github/CoderBuck/viewbinding-ktx/1.0.0/viewbinding-ktx-1.0.0.pom.md5
-com/github/CoderBuck/viewbinding-ktx/1.0.0/viewbinding-ktx-1.0.0.pom.sha1
-</code></pre><p>这种是正常的，然后看看 pom 文件的依赖是否正确。</p>
-<h2 id="资料">资料</h2>
-<p>重复的东西就不写了</p>
-<p><a href="https://juejin.im/post/5c2341cdf265da6134387300">JitPack.io 基本使用法</a></p>
-<p><a href="https://www.gcssloop.com/course/PublishLibraryByJitPack">使用JitPack发布Android开源库</a></p>
-<p><a href="https://github.com/CoderBuck/jitpack">我的demo jitpack</a></p>
-<p><a href="https://github.com/Zhuinden/simple-stack/blob/master/simple-stack/build.gradle.kts">simple-stack 是怎么用的</a></p>
-]]></content>
-		</item>
-		
-		<item>
-			<title>Hello Hugo</title>
-			<link>https://coderbuck.github.io/posts/hello-hugo/</link>
-			<pubDate>Sat, 11 Jul 2020 22:17:12 +0800</pubDate>
-			
-			<guid>https://coderbuck.github.io/posts/hello-hugo/</guid>
-			<description>新建文章 hugo new posts/my-first-post.md 或者直接在 content/posts目录手动创建my-first-post.md
+    </item>
+    
+    <item>
+      <title>Hello Hugo</title>
+      <link>https://coderbuck.github.io/posts/hello-hugo/</link>
+      <pubDate>Sat, 11 Jul 2020 22:17:12 +0800</pubDate>
+      
+      <guid>https://coderbuck.github.io/posts/hello-hugo/</guid>
+      <description>新建文章 hugo new posts/my-first-post.md 或者直接在 content/posts目录手动创建my-first-post.md
 Start the Hugo server hugo server -D 启动后可以本地预览
 Build static pages hugo -D 123</description>
-			<content type="html"><![CDATA[<h2 id="新建文章">新建文章</h2>
-<pre><code>hugo new posts/my-first-post.md
-</code></pre><p>或者直接在 <code>content/posts</code>目录手动创建<code>my-first-post.md</code></p>
-<h2 id="start-the-hugo-server">Start the Hugo server</h2>
-<pre><code>hugo server -D
-</code></pre><p>启动后可以本地预览</p>
-<h2 id="build-static-pages">Build static pages</h2>
-<pre><code>hugo -D
-</code></pre><p>123</p>
-]]></content>
-		</item>
-		
-	</channel>
+    </item>
+    
+  </channel>
 </rss>
